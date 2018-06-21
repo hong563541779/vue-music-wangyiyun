@@ -105,6 +105,10 @@ export default {
     refresh () {
       this.scroll && this.scroll.refresh()
     },
+    //  代理better-scroll的scrollTo事件
+    scrollTo () {
+      this.scroll && this.scroll.scrollTo.apply(this.scroll, arguments)
+    },
     //  代理better-scroll的scrollToElement事件
     scrollToElement () {
       this.scroll && this.scroll.scrollToElement.apply(this.scroll, arguments)

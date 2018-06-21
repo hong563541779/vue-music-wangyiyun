@@ -4,7 +4,7 @@ import App from './App'
 import fastclick from 'fastclick'
 import router from './router'
 import VueLazyload from 'vue-lazyload'
-import 'common/stylus/index.styl'
+import 'lib-flexible/flexible'
 //  Vue.config.productionTip = false
 
 Vue.use(VueLazyload, {

@@ -1,6 +1,7 @@
 <template>
   <scroll class="recommend" :data="recommendList" :pulldown="pulldown">
     <div class="recommend-content">
+      <!-- 轮播图-->
       <div>
         <div v-show="banners.length" class="decorate" v-if="banners.length"></div>
         <div v-if="banners.length" class="slider-wrapper">
@@ -12,6 +13,7 @@
             </div>
           </slider>
         </div>
+        <!--推荐歌单-->
         <div class="recomend-list">
           <h1 class="list-title">推荐歌单<i class="iconfont icon-search"></i></h1>
           <div v-show="!this.recommendList.length" class="loading-content">
@@ -66,7 +68,6 @@ export default {
       getBanner().then((res) => {
         if (res.status === ERR_OK) {
           this.banners = res.data.banners
-          console.log(this.banners)
         }
       })
     },

@@ -1,7 +1,7 @@
 <template>
   <div class="m-header">
     <div class="icon"></div>
-    <h1 class="text">Yun-Music</h1>
+    <h1 class="text">云音乐</h1>
   </div>
 </template>
 
@@ -15,9 +15,9 @@ export default {}
   .m-header
     position : relative
     height : 44px
+    line-height 44px
     width : 100%
     text-align : center
-    //color : $color-theme
     background : $color-theme
     z-index: 1001
     .icon
@@ -28,4 +28,5 @@ export default {}
       line-height : 44px
       color : $color-text-l
       letter-spacing : 3px
+      font-size: $font-size-medium-x
 </style>
