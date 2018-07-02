@@ -26,7 +26,6 @@
     font-size: $font-size-medium
     background: $color-theme
     position: relative
-    z-index: 1001
     .tab-item
       flex: 1
       text-align: center

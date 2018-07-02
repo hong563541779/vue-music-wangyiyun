@@ -65,6 +65,7 @@ export default {
       })
       //  是否派发滚动事件
       if (this.listenScroll) {
+        //  要保留当前的vue实例，并非scroll实例
         let me = this
         this.scroll.on('scroll', (pos) => {
           me.$emit('scroll', pos)
@@ -107,6 +108,7 @@ export default {
     },
     //  代理better-scroll的scrollTo事件
     scrollTo () {
+      //  this.scroll指向的是better scroll的实例
       this.scroll && this.scroll.scrollTo.apply(this.scroll, arguments)
     },
     //  代理better-scroll的scrollToElement事件

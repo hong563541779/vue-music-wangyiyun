@@ -1,6 +1,8 @@
 <template>
   <div class="singer" ref="singer">
-    <list-view :data="this.singers" class="singer-content"></list-view>
+    <list-view :data="this.singers" class="singer-content" @select="selectSinger" ref="list"></list-view>
+    <!--挂载子路由-->
+    <router-view></router-view>
   </div>
 </template>
 <script type="text/ecmascript-6">
@@ -8,6 +10,7 @@ import {getSingers} from 'api/singer'
 import listView from 'base/listview/listview'
 import {ERR_OK} from 'common/js/config'
 import Singer from 'common/js/singer'
+import {mapMutations} from 'vuex'
 
 const pinyin = require('pinyin')
 const HOT_NAME = '热门'
@@ -25,6 +28,12 @@ export default {
     this._getSingers()
   },
   methods: {
+    selectSinger (singer) {
+      this.$router.push({
+        path: `/singer/${singer.id}`
+      })
+      this.setSinger(singer)
+    },
     _getSingers () {
       getSingers().then((res) => {
         if (res.status === ERR_OK) {
@@ -86,7 +95,10 @@ export default {
         return a.title.charCodeAt(0) - b.title.charCodeAt(0)
       })
       return hot.concat(ret)
-    }
+    },
+    ...mapMutations({
+      setSinger: 'SET_SINGER'
+    })
   }
 }
 </script>

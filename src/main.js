@@ -3,6 +3,7 @@ import Vue from 'vue'
 import App from './App'
 import fastclick from 'fastclick'
 import router from './router'
+import store from './store'
 import VueLazyload from 'vue-lazyload'
 import 'lib-flexible/flexible'
 //  Vue.config.productionTip = false
@@ -18,5 +19,6 @@ new Vue({
   el: '#app',
   //  create Element的一个方法
   render: h => h(App),
+  store,
   router
 })

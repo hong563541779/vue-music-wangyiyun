@@ -19,7 +19,6 @@ export default {}
     width : 100%
     text-align : center
     background : $color-theme
-    z-index: 1001
     .icon
       display : inline-block
     .text
