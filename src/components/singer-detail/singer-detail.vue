@@ -52,6 +52,7 @@ export default {
         if (res.status === ERR_OK) {
           console.log(res)
           this.songs = this._normalizeSongs(res.data.hotSongs)
+          console.log(this.songs)
         }
       })
     },
@@ -73,12 +74,4 @@ export default {
   .slide-enter, .slide-leave-to
     transform: translate3d(30%, 0, 0)
     opacity: 0
-  .singer-detail
-    position: fixed
-    top: 0
-    bottom: 0
-    width: 100%
-    z-index: 100
-    background: $color-background
-
 </style>

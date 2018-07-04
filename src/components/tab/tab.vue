@@ -25,7 +25,6 @@
     width: 100%
     font-size: $font-size-medium
     background: $color-theme
-    position: relative
     .tab-item
       flex: 1
       text-align: center

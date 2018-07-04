@@ -1,6 +1,6 @@
 <template>
-  <scroll class="recommend" :data="recommendList" :pulldown="pulldown">
-    <div class="recommend-content">
+  <div class="recommend">
+    <scroll class="recommend-content" :data="recommendList" :pulldown="pulldown">
       <!-- 轮播图-->
       <div>
         <div v-show="banners.length" class="decorate" v-if="banners.length"></div>
@@ -36,8 +36,8 @@
           </ul>
         </div>
       </div>
-    </div>
-  </scroll>
+    </scroll>
+  </div>
 </template>
 <script type="text/ecmascript-6">
 import {getBanner, getRecommendList} from 'api/recommend'
@@ -93,7 +93,7 @@ export default {
   z-index: 100
   .recommend-content
     width: 100%
-    height: auto
+    height: 100%
     overflow: hidden
     .decorate
       position: absolute

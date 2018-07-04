@@ -1,10 +1,10 @@
 export default class Song {
-  constructor ({id, singer, name, album, img1v1Url, publishTime}) {
+  constructor ({id, singer, name, album, image, publishTime}) {
     this.id = id
     this.singer = singer//  歌手
     this.name = name
     this.album = album
-    this.img1v1Url = img1v1Url
+    this.image = image
     this.publishTime = publishTime
   }
 }
