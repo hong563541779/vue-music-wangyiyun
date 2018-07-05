@@ -33,6 +33,7 @@
     "better-scroll": "^1.11.1",
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
+    "create-keyframe-animation": "^0.1.0",
     "css-loader": "^0.28.11",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
